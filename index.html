@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>TIME</title>
+<style>
+
+body{
+	margin:0;
+	padding:0;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	width:100%;
+	height:100vh;
+	background:black;
+}
+h1{
+	font-size:100px;
+	background:linear-gradient(45deg,aqua,pink,green);
+	font-weight:800;
+	-webkit-background-clip:text;
+	color:transparent;
+	animation:animate 2s linear infinite;
+
+}
+@keyframes animate
+{
+	0%
+{
+	filter:hue-rotate(0deg);
+}	100%
+{
+	filter:hue-rotate(360deg);
+}
+
+}
+
+</style>
+
+</head>
+<body>
+<h1 id="d"></h1>
+<script>
+let time=document.getElementById("d");
+setInterval(()=>{
+let d=new Date();
+time.innerHTML=d.toLocaleTimeString();
+},1000)
+</script>
+</body>
+</html>
